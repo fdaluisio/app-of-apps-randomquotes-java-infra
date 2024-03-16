@@ -10,8 +10,7 @@ spec:
   destination:
     name: ''
     namespace: default
-    server: 'https://127.0.0.1:36197'
-#   server: 'https://kubernetes.default.svc'
+    server: 'https://192.168.11.167:6444'
   source:
     path: randomquotes-java
     repoURL: 'https://github.com/fdaluisio/RandomQuotes-Java-infra.git'
