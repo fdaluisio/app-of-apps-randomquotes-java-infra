@@ -20,13 +20,13 @@ spec:
         repoURL: https://github.com/fdaluisio/RandomQuotes-Java-infra.git
         targetRevision: HEAD
         path: randomquotes-java
+        helm:                                                                                                                                                                
+          valueFiles:                                                                                                                                                        
+            - 'values-{{cluster}}.yaml'
+          releaseName: '{{cluster}}-randomquotes-java'
       destination:
         server: '{{url}}'
         namespace: default
-        helm:                                                                                                                                                                
-          valueFiles:                                                                                                                                                        
-            - values-{{cluster}}.yaml
-          releaseName: argocd-randomquotes-java-stage                                                                                                                        
       syncPolicy:                                                                                                                                                            
         syncOptions:                                                                                                                                                         
           - CreateNamespace=true                                                                                                                                             
