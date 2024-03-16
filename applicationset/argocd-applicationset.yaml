@@ -6,8 +6,8 @@ spec:
   generators:
   - list:
       elements:
-        #- cluster: dev
-        #url: 'https://192.168.11.167:6445'
+      - cluster: dev
+        url: 'https://192.168.11.167:6445'
       - cluster: stage
         url: 'https://192.168.11.167:6444'
   template:
