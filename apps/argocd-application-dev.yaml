@@ -18,7 +18,7 @@ spec:
     helm:
       valueFiles:
         - values-dev.yaml
-      releaseName: dev-argocd-randomquotes-java
+      releaseName: dev-randomquotes-java
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
