@@ -16,21 +16,20 @@ spec:
     spec:
       project: default
       source:
-#       repoURL: https://github.com/fdaluisio/app-of-apps-randomquotes-java-infra.git
         repoURL: https://github.com/fdaluisio/RandomQuotes-Java-infra.git
         targetRevision: HEAD
         path: randomquotes-java
-        helm:                                                                                                                                                                
-          valueFiles:                                                                                                                                                        
+        helm:
+          valueFiles:
             - 'values-{{cluster}}.yaml'
           releaseName: '{{cluster}}-randomquotes-java'
       destination:
         server: '{{url}}'
         namespace: default
-      syncPolicy:                                                                                                                                                            
-        syncOptions:                                                                                                                                                         
-          - CreateNamespace=true                                                                                                                                             
-        automated:                                                                                                                                                           
-          selfHeal: true                                                                                                                                                     
-          prune: true                                                                                                                                                        
-          allowEmpty: true   
+      syncPolicy:
+        syncOptions:
+          - CreateNamespace=true
+        automated:
+          selfHeal: true
+          prune: true
+          allowEmpty: true
