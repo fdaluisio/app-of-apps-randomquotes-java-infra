@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: randomquotes-java-svil
+  name: dev-randomquotes-java
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -10,15 +10,15 @@ spec:
   destination:
     name: ''
     namespace: default
-    server: 'https://kubernetes.default.svc'
+    server: 'https://192.168.11.167:6445'
   source:
     path: randomquotes-java
     repoURL: 'https://github.com/fdaluisio/RandomQuotes-Java-infra.git'
     targetRevision: HEAD
     helm:
       valueFiles:
-        - values-kind.yaml
-      releaseName: svil-argocd-randomquotes-java
+        - values-dev.yaml
+      releaseName: dev-argocd-randomquotes-java
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
