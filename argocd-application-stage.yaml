@@ -10,7 +10,7 @@ spec:
   destination:
     name: ''
     namespace: default
-    server: 'https://127.0.0.1:41671'
+    server: 'https://127.0.0.1:36197'
 #   server: 'https://kubernetes.default.svc'
   source:
     path: randomquotes-java
